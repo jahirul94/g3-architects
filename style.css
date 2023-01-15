@@ -4,6 +4,8 @@ body{
     background-color:#FFFFFF;
     font-family: 'Open Sans', sans-serif;
     margin: 0;
+    padding: 0;
+    background-color: lightblue;
 }
 
 /* --------------
@@ -11,16 +13,25 @@ body{
 ---------------- */
 
 .navbar{
-   display: flex;
-   justify-content: space-around;
-   
+ display: flex;
+ justify-content: space-between;
+ margin-top: 60px;
+ text-align: center;
 }
-.nav-list{
-    display: flex;
-   text-decoration: none;
+
+.nav-list>a{
+  text-decoration: none;
+   color: #424242;
+   padding-right: 50px;
+   font-size: 18px;
+   color: #424242;
+  
 }
 .nav-head{
-   size: 64px;
+   font-size: 45px;
+   width: 600;
+   margin-left: 15px;
+
 }
 
 
@@ -57,8 +68,8 @@ body{
 }
 
 .banner-img{
-   width: 1450px;
-   height: 700px;
+   width: 1450vh;
+   height: 100%;
    margin-left: 15px;
    margin-bottom: 130px;
 }
@@ -66,10 +77,6 @@ body{
 /*---------------
       body style  
       -----------*/
-
-.img-body{
- 
-}
 
 .grid-layout{
    display: grid;
@@ -120,10 +127,10 @@ body{
    
    
 .description{
-    position: relative;
-    left: 140px;
-    top: 100px;
-   
+  position: relative;
+  left: 140px;
+  top: 100px;
+ 
       
 }
 .rectangle {
@@ -147,6 +154,7 @@ body{
    color: #131313;
    margin-bottom: 24px;
    padding-left: 10px;
+   border-left: #FF900E solid;
 
  }
  .head>p{
@@ -189,6 +197,8 @@ body{
  ---------------- */
 .ratting{
    padding-left: 20px;
+   text-align: center;
+
 }
 
  .rat-head{
@@ -214,7 +224,7 @@ body{
    height: 243px;
    width: 243px;
    padding: 40px;
-   margin-bottom: 200px;
+   margin-bottom: 100px;
    border-radius: 7px;
    
  }
@@ -263,4 +273,59 @@ body{
    padding-bottom: 50px;
    text-align: center;
    text-decoration: none;
+}
+.copyright>a{
+   text-decoration: none;
+   font-size: 20px;
+   color: #424242;
+
+}
+
+
+/*-----------------
+    media query
+----------------- */
+@media only screen and (max-width:576px) {
+    .navbar{
+     flex-direction: column;
+    }
+    .nav-list{
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+      gap: 10px;
+      margin-top: 10px;
+
+    }
+
+    .grid-layout{
+      grid-template-columns: repeat(1,1fr);
+    }
+
+    .banner-img>img{
+      width: 3%;
+      height: 3%;
+    }
+    .body-baner{
+      flex-direction: column;
+      
+    }
+
+    .description{
+      margin-left:-130px;
+    }
+   .experience{
+     flex-direction: column-reverse;
+   }
+   .icons-primary{
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -10px;
+   }
+
+   .footer-img-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+     
 }
